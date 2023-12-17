@@ -1,0 +1,506 @@
+/*font-family: 'Alex Brush', cursive;
+font-family: 'Prata', serif;*/
+
+html {
+  font-size: 18px;
+}
+
+body {
+    margin: 0;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height:1.7;
+}
+
+/* Resets */
+
+*,
+*:after,
+*:before {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+a, a:visited, a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+a:focus, a:active {
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+aside, nav, footer, main, header, section, main {
+    display: block;
+}
+
+img, svg {
+    vertical-align: top;
+    max-width: 100%;
+    height: auto;
+}
+
+input, textarea, button, select {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background: transparent none;
+    cursor: pointer;
+}
+
+/*Base
+===============*/
+
+.container {
+    width: 1210px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Text
+===============*/
+.title {
+    font-family: 'Alex Brush', cursive;
+    font-size: 5rem;
+    line-height: 5rem;
+    color: #f7e392;
+}
+
+.subtitle {
+    font-family: 'Prata', serif;
+    font-size: 1rem;
+    color: #f7e392;
+}
+
+.text {
+    font-family: 'Prata', serif;
+    font-size: .8rem;
+    color: #f7e392;
+}
+
+/* Button
+===============*/
+.btn {
+    padding: .8rem 1rem .5rem 1rem;
+
+    font-family: 'Prata', serif;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #707561;
+
+    border-radius: 2rem;
+    background-color: #f7e392;
+}
+
+/*Page-1
+===============*/
+
+.page1 {
+    margin: 0 auto;
+    max-height: 875px;
+
+    background-color: #707561;
+}
+
+.page1-bg-image {
+    width: 1440px;
+    height: 875px;
+    margin: 0 auto;
+
+    background-image: url('../img/page1_bg.png');
+    background-size: cover;
+}
+
+.page1-content {
+
+    padding-top: 125px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.page1-text {
+    max-width: 530px;
+    text-align: center;
+}
+
+.page1-text .subtitle {
+    margin-bottom: 40px;
+}
+
+.page1-text .title {
+    margin-bottom: 50px;
+}
+
+.page1-text .text {
+    margin-bottom: 30px;
+}
+
+/*Page-2
+===============*/
+.page2 {
+    margin: 0 auto;
+    max-height: 875px;
+
+    background-color: #fff;
+}
+
+.page2-bg-image {
+    width: 1440px;
+    height: 875px;
+    margin: 0 auto;
+
+    background-image: url('../img/page2_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.page2-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page2-text {
+    text-align: center;
+}
+
+.page2-text .subtitle {
+    margin-top: 6.7rem;
+    color: black;
+}
+
+.page2-text .title {
+    margin-top: 5rem;
+    color: black;
+}
+
+.page2-text .text {
+    width: 730px;
+    margin-top: 6.3rem;
+    color: black;
+}
+
+/*Page-3
+===============*/
+.page3 {
+    margin: 0 auto;
+    max-height: 875px;
+
+    background-color: #707561;
+}
+
+.page3-bg-image {
+    width: 1440px;
+    height: 875px;
+    margin: 0 auto;
+}
+
+.page3-content {
+    display: grid;
+    grid-template-rows: 1fr 3.25fr;
+}
+
+.page3-head-text {
+    text-align: center;
+    padding-top: 70px;
+}
+
+.page3-img-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.page3-img-container .subtitle {
+    margin-top: 30px;
+    width: 300px;
+}
+
+.page3-img-container .text {
+    width: 300px;
+}
+
+.page3-img-candel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Page-4
+===============*/
+
+.page4 {
+    margin: 0 auto;
+    max-height: 875px;
+
+    background-color: #fff;
+}
+
+.page4-bg-image {
+    width: 1440px;
+    height: 875px;
+    margin: 0 auto;
+
+    background-image: url('../img/page4_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page4-content {
+    padding-top: 150px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-gap: 9rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page4-content-text {
+    width: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: black;
+    text-align: center;
+}
+
+.page4-content-text .subtitle {
+    margin-bottom: 1.5rem;
+    color: #000000;
+}
+
+.page4-content-text .title {
+    margin-bottom: 2rem;
+    color: #000000;
+}
+
+.page4-content-text .text {
+    margin-bottom: 1rem;
+    color: #000000;
+    width: 320px;
+}
+
+.page4-content-text .btn {
+    color: #000000;
+}
+
+/*Page-5
+===============*/
+
+.page5 {
+    margin: 0 auto;
+    max-height: 2110px;
+
+    background-color: #707561;
+}
+
+.page5-bg-image {
+    width: 1440px;
+    height: 2110px;
+    margin: 0 auto;
+
+    background-image: url('../img/page5_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page5-content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+.page5-content .title {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    grid-column: span 2;
+}
+
+.page5-left-candel-column,
+.page5-right-candel-column {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.page5-left-candel-column .page5-image:first-child {
+    margin-top: .5rem;
+}
+
+.page5-right-candel-column .page5-image:first-child {
+    margin-top: 8rem;
+}
+
+.page5-left-candel-column .subtitle,
+.page5-right-candel-column .subtitle {
+    margin-top: 3rem;
+}
+
+.page5-left-candel-column .btn,
+.page5-right-candel-column .btn {
+    margin-top: 2rem;
+}
+
+.page5-image {
+    margin-top: 5rem;
+}
+
+/*Page-6
+===============*/
+
+.page6 {
+    margin: 0 auto;
+    max-height: 873px;
+
+    background-color: #fff;
+}
+
+.page6-bg-image {
+    width: 1440px;
+    height: 873px;
+    margin: 0 auto;
+
+    background-image: url('../img/page6_bg.png');
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.page6-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.page6-header-container .title,
+.page6-header-container .subtitle{
+    text-align: center;
+    color: black;
+}
+
+.page6-header-container .title{
+    margin-top: 20rem;
+}
+.page6-header-container .subtitle{
+    margin-top: 2rem;
+}
+
+.comments-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comments-block .text:first-child {
+    margin-top: 12rem;
+}
+
+.comments-block .text {
+    width: 490px;
+    margin-top: 3rem;
+}
+
+.comments-block .subtitle {
+    margin-top: 1rem;
+}
+
+.comments-block .text,
+.comments-block .subtitle{
+    text-align: center;
+    color: black;
+}
+
+/*Page-7
+===============*/
+
+.page7 {
+    margin: 0 auto;
+    max-height: 1165px;
+
+    background-color: #707561;
+}
+
+.page7-bg-image {
+    width: 1440px;
+    height: 1165px;
+    margin: 0 auto;
+
+    background-image: url('../img/page7_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page7-content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 3.8fr;
+    grid-gap: 2rem;
+}
+
+.page7-content .title {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.page7-candelrow {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page7-candelset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page7-candelset .subtitle {
+    margin-top: 2rem;
+}
+
+.page7-candelset .btn {
+    margin-top: 1rem;
+}
+
+/* Footer
+===============*/
+
+.footer {
+    margin: 0 auto;
+    max-height: 1440px;
+
+    background-color: #fff;
+}
+
+.footer-content .text {
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    text-align: left;
+    color: black;
+}
