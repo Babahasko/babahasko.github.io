@@ -9,8 +9,26 @@
 	<title>dusha we are love</title>
 </head>
 <body>
+	<!-- Навигационное меню -->
+	<nav class="navigation">
+		<div class="container">
+			<div class="nav-content">
+				<div class="nav-logo">DUSHA</div>
+				<div class="nav-menu">
+					<a href="#page1" class="nav-link">Главная</a>
+					<a href="#page2" class="nav-link">О нас</a>
+					<a href="#page3" class="nav-link">Свечи</a>
+					<a href="#page4" class="nav-link">Подписка</a>
+					<a href="#page5" class="nav-link">Новинки</a>
+					<a href="#page6" class="nav-link">Отзывы</a>
+					<a href="#page7" class="nav-link">Коллекция</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
 	<main class="page">
-		<section class="page1">
+		<section id="page1" class="page1">
 			<div class="page1-bg-image">
 				<div class="container">
 					<div class="page1-content">
@@ -28,7 +46,7 @@
 			</div>
 		</section>
 
-		<section class="page2">
+		<section id="page2" class="page2">
 			<div class="page2-bg-image">
 				<div class="container">
 					<div class="page2-content">
@@ -43,7 +61,7 @@
 			</div>
 		</section>
 
-		<section class="page3">
+		<section id="page3" class="page3">
 			<div class="page3-bg-image">
 				<div class="container">
 					<div class="page3-content">
@@ -70,7 +88,7 @@
 			</div>
 		</section>
 
-		<section class="page4">
+		<section id="page4" class="page4">
 			<div class="page4-bg-image">
 				<div class="container">
 					<div class="page4-content">
@@ -88,7 +106,7 @@
 			</div>
 		</section>
 
-		<section class="page5">
+		<section id="page5" class="page5">
 			<div class="page5-bg-image">
 				<div class="container">
 					<div class="page5-content">
@@ -97,7 +115,7 @@
 							<div class="page5-image">
 								<img src="img/page5_candel1.png" alt="">
 							</div>
-							<div class="subtitle">CANDLE SET #1 | $100.00</div>
+							<div class="subtitle">CANDLE SET #1 | <span class="price-animated">$100.00</span></div>
 							<a class="btn" href="#">SHOP NOW</a>
 
 
@@ -128,7 +146,7 @@
 			</div>
 		</section>
 
-		<section class="page6">
+		<section id="page6" class="page6">
 			<div class="page6-bg-image">
 				<div class="container">
 					<div class="page6-content">
@@ -151,7 +169,7 @@
 			</div>
 		</section>
 
-		<section class="page7">
+		<section id="page7" class="page7">
 			<div class="page7-bg-image">
 				<div class="container">
 					<div class="page7-content">
@@ -197,6 +215,14 @@
 			</div>
 		</footer>
 
+		<!-- Кнопка "Наверх" -->
+		<button id="scrollToTop" class="scroll-to-top" title="Наверх">
+			↑
+		</button>
+
 	</main><!-- Page-->
+	
+	<!-- Подключение JavaScript -->
+	<script src="js/script.js"></script>
 </body>
 </html>

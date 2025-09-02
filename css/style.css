@@ -7,6 +7,7 @@ html {
 
 body {
     margin: 0;
+    padding-top: 80px; /* Отступ для фиксированной навигации */
 
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
@@ -69,6 +70,96 @@ button, input[type="submit"] {
     padding-left: 15px;
     margin-left: auto;
     margin-right: auto;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Навигация
+===============*/
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(112, 117, 97, 0.95);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navigation.scrolled {
+    background: rgba(112, 117, 97, 0.98);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-logo {
+    font-family: 'Alex Brush', cursive;
+    font-size: 2rem;
+    color: #f7e392;
+    font-weight: bold;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-link {
+    font-family: 'Prata', serif;
+    font-size: 0.9rem;
+    color: #f7e392;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-link:hover {
+    background: rgba(247, 227, 146, 0.2);
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #f7e392;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.nav-link.active {
+    background: rgba(247, 227, 146, 0.3);
+    color: #fff;
+}
+
+.nav-link.active::after {
+    width: 80%;
 }
 
 /* Text
@@ -503,4 +594,299 @@ button, input[type="submit"] {
     margin-bottom: .5rem;
     text-align: left;
     color: black;
+}
+
+/* Анимации
+===============*/
+
+/* Базовые стили для анимированных элементов */
+.animate-on-scroll {
+    opacity: 1; /* По умолчанию элементы видимы */
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Стили для элементов, которые еще не анимированы */
+.animate-on-scroll:not(.animated) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-on-scroll.animated {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Анимация для изображений */
+img {
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 1s ease;
+    opacity: 1; /* По умолчанию изображения видимы */
+    transform: scale(1);
+}
+
+img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+/* Анимация для кнопок */
+.btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(247, 227, 146, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Анимация для текстовых элементов */
+.title, .subtitle, .text {
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Анимация для секций */
+section {
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 1; /* По умолчанию секции видимы */
+    transform: translateY(0);
+}
+
+/* Плавная прокрутка для всей страницы */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Анимация загрузки страницы */
+.page-loaded .page1-content {
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+/* Стили для анимированных элементов */
+.title-animated,
+.subtitle-animated,
+.text-animated,
+.button-animated,
+.page-animated,
+.element-animated {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Ключевые кадры для анимаций */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Анимация для карточек свечей */
+.page3-img-candel,
+.page5-image,
+.page7-candelset {
+    transition: all 0.4s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page3-img-candel:hover,
+.page5-image:hover,
+.page7-candelset:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Анимация для фона секций */
+.page1-bg-image,
+.page2-bg-image,
+.page3-bg-image,
+.page4-bg-image,
+.page5-bg-image,
+.page6-bg-image,
+.page7-bg-image {
+    transition: all 0.6s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Эффект параллакса при прокрутке */
+.parallax {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Анимация для комментариев */
+.comments-block .text,
+.comments-block .subtitle {
+    transition: all 0.4s ease;
+    opacity: 1; /* По умолчанию комментарии видимы */
+    transform: translateY(0);
+}
+
+/* Стили для комментариев, которые еще не анимированы */
+.comments-block .text:not(.animated),
+.comments-block .subtitle:not(.animated) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.comments-block .text.animated,
+.comments-block .subtitle.animated {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Стили для анимации отзывов */
+.comments-block .text {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1; /* По умолчанию отзывы видимы */
+    transform: translateY(0);
+}
+
+.comments-block .text:not(:first-child) {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Стили для отзывов, которые еще не анимированы */
+.comments-block .text:not(.animated) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Анимация для заголовков секций */
+.page3-head-text,
+.page5 .title,
+.page6 .title,
+.page7 .title {
+    transition: all 0.5s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Анимация для контейнеров с изображениями */
+.page4-content-image,
+.page5-left-candel-column,
+.page5-right-candel-column {
+    transition: all 0.6s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Анимация для цен */
+.price-animated {
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.price-animated:hover {
+    transform: scale(1.1);
+    color: #fff;
+    text-shadow: 0 0 10px rgba(247, 227, 146, 0.8);
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    .animate-on-scroll {
+        transform: translateY(20px);
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+    
+    .page3-img-candel:hover,
+    .page5-image:hover,
+    .page7-candelset:hover {
+        transform: none;
+    }
+}
+
+/* Кнопка "Наверх"
+===============*/
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: rgba(112, 117, 97, 0.9);
+    color: #f7e392;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    transform: translateY(0);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background: rgba(112, 117, 97, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top:active {
+    transform: translateY(0);
 }
